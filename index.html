@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Face swaping</title>
+<style>
+    img{
+            max-width: 45%;
+        }
+        canvas{
+            position: absolute;
+        }
+</style>
+</head>
+<body>
+<h2>Face Swaping JS</h2>
+<p id="status">OpenCV.js is loading...</p>
+<div class="inputoutput">
+    <div class="caption">imageSrc <input type="file" id="srcFileInput" name="srcFile" /></div>
+    <!--<img id="imageSrc" alt="upload source Image" />-->
+    <img id="imageSrc" alt="upload source Image" src="./assets/images/reference/vamshi.jpg" />
+    
+    <div class="caption">imageTrg <input type="file" id="trgFileInput" name="trgFile" /></div>
+    <!--<img id="imageTrg" alt="upload target Image" />-->
+    <img id="imageTrg" alt="upload target Image" src="./assets/images/reference/gaganc.jpg" />
+</div>
+<!--output-->
+<div class="inputoutput">
+    <canvas id="canvasOutput" ></canvas>
+    <div class="caption">canvasOutput</div>
+</div>
+<script await src="./assets/js/libraries/face-api.js/dist/face-api.min.js"></script>
+<script async src="./assets/js/libraries/opencv.js" type="text/javascript"></script>
+<!--<script src="https://cdn.jsdelivr.net/npm/onnxjs/dist/onnx.min.js"></script>-->
+<!--<script src="https://cdn.jsdelivr.net/npm/onnxruntime-web@1.7.0/dist/onnx.min.js"></script>-->
+<script async src="./assets/js/libraries/onnxruntime.js" type="text/javascript"></script>
+<!--<script async src="./assets/js/libraries/onnxruntime-web@1.19.0.js" type="text/javascript"></script>-->
+
+<!--<script async src="./assets/js/libraries/ml5.js"></script>-->
+<script async type="module" src="./index.js"></script>
+</body>
+<script type="text/javascript">
+    
+
+var Module = {
+ onRuntimeInitialized() {
+ document.getElementById('status').innerHTML = 'OpenCV.js is ready.';
+ }
+};
+</script>
+</body>
+</html>
+
+
